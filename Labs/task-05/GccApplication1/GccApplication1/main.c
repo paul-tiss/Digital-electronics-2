@@ -63,13 +63,11 @@ int main(void)
 ISR(TIMER1_OVF_vect)
 {
     // WRITE YOUR CODE HERE
-    cnt0++;
-    if (cnt0>9)
+    if (cnt0>9){
         cnt0 = 0;
-    if (cnt1>9)
+		cnt1++;
+	}
+    if (cnt1>5)
             cnt1=0;
     cnt0++;
-    cnt1++;
-    SEG_update_shift_regs(cnt0,0);
-    SEG_update_shift_regs(cnt1,1);
 }
